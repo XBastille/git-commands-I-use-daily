@@ -1,6 +1,6 @@
 # git-commands-I-use-daily
 ---
-_A detailed collection of frequently used Git operations._
+A detailed collection of frequently used Git operations.
 ---
 
 ### Starting & Managing Projects
