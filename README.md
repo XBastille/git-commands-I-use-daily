@@ -1,69 +1,68 @@
 # git-commands-I-use-daily
 ---
 
-## Git Operations Guide
+# Git Commands Overview
 
-_A summary of essential Git operations frequently utilized._
-
+_A detailed collection of frequently used Git operations._
 ---
 
 ### Starting & Managing Projects
 
 | Command | Description |
 | ------- | ----------- |
-| `git init` | Set up a Git repository locally |
-| `git clone ssh://git@github.com/[username]/[repository-name].git` | Clone an existing repository from a remote server |
+| `git init` | Start a Git repository in your current directory |
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Make a local copy of a remote repository |
 
-### Recording Changes
-
-| Command | Description |
-| ------- | ----------- |
-| `git status` | Display current repository status |
-| `git add [file-name.txt]` | Stage a specific file for the next commit |
-| `git add -A` | Stage all modified and new files for the next commit |
-| `git commit -m "[commit message]"` | Save the staged changes with a message |
-| `git rm -r [file-name.txt]` | Delete a file or directory from the repository |
-
-### Managing Branches
+### Recording Changes & Updates
 
 | Command | Description |
 | ------- | ----------- |
-| `git branch` | Show a list of all branches (the current branch is marked with an asterisk) |
-| `git branch -a` | Display both local and remote branches |
-| `git branch [branch name]` | Create a new branch |
-| `git branch -d [branch name]` | Remove a branch locally |
+| `git status` | View the current working state of your repository |
+| `git add [file-name.txt]` | Add a file to be tracked in the next commit |
+| `git add -A` | Stage every new and modified file for the next commit |
+| `git commit -m "[commit message]"` | Commit all staged changes with a descriptive message |
+| `git rm -r [file-name.txt]` | Remove a file or directory from the working directory and Git tracking |
+
+### Working with Branches
+
+| Command | Description |
+| ------- | ----------- |
+| `git branch` | List all local branches (the active one has an asterisk) |
+| `git branch -a` | Show all branches, both local and remote |
+| `git branch [branch name]` | Create a fresh branch |
+| `git branch -d [branch name]` | Delete a branch locally |
 | `git push origin --delete [branch name]` | Remove a branch from the remote repository |
-| `git checkout -b [branch name]` | Create a branch and switch to it immediately |
-| `git checkout -b [branch name] origin/[branch name]` | Create and switch to a local copy of a remote branch |
-| `git branch -m [old branch name] [new branch name]` | Rename an existing branch |
-| `git checkout [branch name]` | Switch between branches |
-| `git checkout -` | Switch to the previously active branch |
-| `git checkout -- [file-name.txt]` | Undo changes in a file before committing |
-| `git merge [branch name]` | Combine another branch into the active one |
-| `git merge [source branch] [target branch]` | Merge the specified source branch into the target branch |
-| `git stash` | Temporarily save changes that are not ready to commit |
-| `git stash clear` | Clear all stashed changes |
+| `git checkout -b [branch name]` | Make a new branch and immediately switch to it |
+| `git checkout -b [branch name] origin/[branch name]` | Create a local branch from a remote one and switch to it |
+| `git branch -m [old branch name] [new branch name]` | Rename a branch in your local repo |
+| `git checkout [branch name]` | Switch to a different branch |
+| `git checkout -` | Switch back to the previously checked-out branch |
+| `git checkout -- [file-name.txt]` | Revert a file’s changes back to the last commit |
+| `git merge [branch name]` | Combine changes from the specified branch into your current one |
+| `git merge [source branch] [target branch]` | Merge a source branch into the target branch |
+| `git stash` | Save your uncommitted changes temporarily, keeping your working directory clean |
+| `git stash clear` | Remove all stored stashes permanently |
 
-### Syncing & Sharing Code
-
-| Command | Description |
-| ------- | ----------- |
-| `git push origin [branch name]` | Upload a branch to a remote repository |
-| `git push -u origin [branch name]` | Upload changes to the remote repository and track the branch |
-| `git push` | Push committed changes to the remote repository (for the current branch) |
-| `git push origin --delete [branch name]` | Remove a remote branch |
-| `git pull` | Synchronize the local repository with the latest changes from the remote |
-| `git pull origin [branch name]` | Fetch and merge changes from a specific branch |
-| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Link a local repository with a remote one |
-| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Update the remote repository's URL to use SSH |
-
-### Viewing Logs & Comparing Changes
+### Synchronizing & Sharing Code
 
 | Command | Description |
 | ------- | ----------- |
-| `git log` | Show a history of changes |
-| `git log --summary` | View a detailed log of changes |
-| `git log --oneline` | Display a condensed log of changes |
-| `git diff [source branch] [target branch]` | Compare changes between branches before merging |
+| `git push origin [branch name]` | Send your local branch to the remote repository |
+| `git push -u origin [branch name]` | Push changes to the remote repository and link the branch for future use |
+| `git push` | Push the latest changes from your local repo to the remote one (for the current branch) |
+| `git push origin --delete [branch name]` | Permanently delete a branch from the remote repository |
+| `git pull` | Fetch the latest changes from the remote repository and merge them into your current branch |
+| `git pull origin [branch name]` | Retrieve and integrate changes from a remote branch |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Associate your local repository with a remote GitHub repository |
+| `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Change the URL of the remote repository, switching to SSH if needed |
 
---- 
+### Investigating & Comparing Changes
+
+| Command | Description |
+| ------- | ----------- |
+| `git log` | Show a log of commits in your repository’s history |
+| `git log --summary` | View a detailed breakdown of the commit history |
+| `git log --oneline` | Get a compact, single-line view of the commit history |
+| `git diff [source branch] [target branch]` | Compare the differences between two branches before merging |
+
+---
