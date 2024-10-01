@@ -1,8 +1,5 @@
 # git-commands-I-use-daily
 ---
-
-# Git Commands Overview
-
 _A detailed collection of frequently used Git operations._
 ---
 
