@@ -1,5 +1,5 @@
 # git-commands-I-use-daily
-A detailed collection of frequently used Git operations.
+A detailed collection of frequently used Git operations. If you find this repo useful, consider putting a star ⭐. I will appreciate it a lot!!
 
 ### Starting & Managing Projects
 
